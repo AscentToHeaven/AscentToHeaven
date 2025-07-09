@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ascent To Heaven</title>
-    <!-- The style.css file allows you to change the look of your web pages.
-         If you include the next line in all your web pages, they will all share the same look.
-         This makes it easier to make new pages for your site. -->
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     
   </head>
 
-  <style> </style>
+  <style> </style> <!-- Load the CSS -->
 
   <body>
 
@@ -31,7 +28,11 @@
         </nav>
       </div>
 
+      <!-- Main Box containing the sidebar and the body -->
+      <!-- TODO: make the look vetter when browser window changes sizes
+            there is so much empty space right now-->
       <div class="border" id="main">
+        <!-- bio boxes, pfp and bio text -->
         <div id="bio" class="valign">
           <img src="assets/pfp.png" alt="" id="pfp" class="border">
           <div id="bio-txt" class="border textbox">
@@ -42,16 +43,18 @@
             <p>
             Originally I was going to tell you about me, where I'm from, why I'm writing, why I made this. None of that it really important.
             I'm writing because I want, and what <strong>I</strong> want is the only thing that matters.
-            </p>
+            </p> <!-- TODO: update all of this -->
             <p>
               This is <strong>Ascent to Heaven</strong>, this was made by me for you, for you to understand what I am so that you might make the ascent that I already have.
             </p>
           </div>
         </div>
 
+        <!-- This is the log box. made up of a container, a head and a body -->
         <div id="log-box" class="border halign">
           <div id="log-head" class=""><h2>Update Log!</h2></div>
           <div id="log-body" class="textboxt">
+          <!-- script to get the text from log.html so this doesn't become way too long -->
           <script>
             fetch('log.html')
               .then(res => res.text())
@@ -62,6 +65,7 @@
           </div>
         </div>
 
+        <!-- cute little banners -->
         <div class="pic">
           <img src="assets/nene.png" alt="Neneyo">
           <img src="assets/bi.png" alt="bisexual flag">
@@ -70,6 +74,7 @@
           <img src="assets/ARCH.webp" alt="Proudly Made With Arch Linux">
         </div>
       </div>
+      <!-- kitty smoking image -->
     <img src="assets/cat1.png" alt="kittyyyyy" class="float-rel fade" id="img1">
     </div>
   </body>
