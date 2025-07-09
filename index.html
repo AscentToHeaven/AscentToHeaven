@@ -17,30 +17,60 @@
 
 
     <div class="head">
-      <a href="htmls/script.html"><h1>The first step starts here.</h1></a>
+      <h2 class="border" id="title">THE ASCENT TO HEAVEN IS PAVED IN BLOOD</h2>
     </div>
-
 
     <div class="master">
       <!-- Sidebar and nav links -->
-      <div class="box sidebar">
-        <nav class="debug">
-          <a href="links/script.html">Manifesto</a><br>
-          <a href="links/script.html">Manifesto</a>
+      <div class="border sidebar">
+        <nav>
+          <li><a href="links/mani.html">Manifesto</a></li>
+          <li><a href="links/blog.html">My Blog</a></li>
+          <li><a href="links/music.html">Music</a></li>
+          <li><a href="links/pics.html">Pictures</a></li>
         </nav>
       </div>
 
-      <div class="box" id="main">
-        <h2>THE ASCENT TO HEAVEN IS PAVED IN BLOOD</h2>
+      <div class="border" id="main">
+        <div id="bio" class="valign">
+          <img src="assets/pfp.png" alt="" id="pfp" class="border">
+          <div id="bio-txt" class="border textbox">
+            <img src="assets/star2.gif" alt="star1" class="float-rel" id="img2">
+            <h2>I'm Kena</h2>
+            <p>This is my page. These are my writings. And these are my interests.</p>
+            <h3>Who am I?</h3>
+            <p>
+            Originally I was going to tell you about me, where I'm from, why I'm writing, why I made this. None of that it really important.
+            I'm writing because I want, and what <strong>I</strong> want is the only thing that matters.
+            </p>
+            <p>
+              This is <strong>Ascent to Heaven</strong>, this was made by me for you, for you to understand what I am so that you might make the ascent that I already have.
+            </p>
+          </div>
+        </div>
+
+        <div id="log-box" class="border halign">
+          <div id="log-head" class=""><h2>Update Log!</h2></div>
+          <div id="log-body" class="textboxt">
+          <script>
+            fetch('log.html')
+              .then(res => res.text())
+              .then(data => { document.getElementById('log-body').innerHTML = data;})
+              .catch(err => {document.getElementById('log-body').textContent = "Failed to get logs";
+                             console.error(err);})
+          </script>
+          </div>
+        </div>
 
         <div class="pic">
-          <img src="assets/nene.png" alt="">
-          <img src="assets/bi.png" alt="">
-          <img src="assets/enby.png" alt="">
-          <img src="assets/stat.png" alt="">
-          <img src="assets/ARCH.webp" alt="">
+          <img src="assets/nene.png" alt="Neneyo">
+          <img src="assets/bi.png" alt="bisexual flag">
+          <img src="assets/enby.png" alt="NB flag">
+          <img src="assets/stat.png" alt="Statue">
+          <img src="assets/ARCH.webp" alt="Proudly Made With Arch Linux">
         </div>
       </div>
+    <img src="assets/cat1.png" alt="kittyyyyy" class="float-rel fade" id="img1">
     </div>
   </body>
 </html>

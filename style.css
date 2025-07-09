@@ -1,18 +1,15 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
 @import 'colors.css';
-@import 'win16.css';
 
 html {
-  background-color: var(--dark0);
+  background-color: var(--c5);
 }
 
 body {
   font-family:'main';
-  color: var(--black);
+  color: var(--fg);
   background-image:url("assets/spacer.gif");
   background-size: 20%;
+  /* background-color: var(--c5); */
 
   display:flex;
   flex-direction: column;
@@ -28,7 +25,18 @@ body {
   min-height: 1000px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+h2, h3 {
+  margin: 0px;
+}
+
 .master {
+  user-select: none;
+  position: relative;
+
   height: 800px;
   width: 1200px;
 
@@ -37,28 +45,39 @@ body {
   justify-content: space-between;
 }
 
-.box {
-  user-select: none;
-  position: relative;
+.border {
+  background-color: var(--bg);
+  border: solid var(--c1);
+}
 
-  background-color: var(--gray);
-  border-left: solid var(--white);
-  border-top: solid var(--white);
-  border-right: solid var(--darkgray);
-  border-bottom: solid var(--darkgray);
+.textbox {
+  background-color: var(--c2);
+  padding: 6px;
+}
+
+.valign {
+  display: flex;
+  flex-direction: row;
+}
+
+.halign {
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar {
   width: 200px;
   margin: 0;
+  padding-top: 10px;
 }
 
 nav {
   margin-top: 10px;
+  margin-left: 20%;
 
   display:flex;
   flex-direction:column;
-  align-items:center;
+  align-items:start;
 }
 
 .head {
@@ -73,16 +92,47 @@ nav {
   flex-direction:column;
   align-items:center;
 
-  color: var(--white);
+  color: var(--fg);
+}
+
+li, ul {
+  list-style-position: inside;
+  text-align: center;
 }
 
 #main {
   width: 970px;
   /* height: 1000px; */
 
+  padding: 10px;
+
   display:flex;
   flex-direction:column;
   align-items:center;
+}
+
+#pfp {
+  width: 256px;
+  height: 256px;
+
+  left: 20px;
+  top: 20px;
+  margin-right: 10px;
+}
+
+#bio {
+  width: 100%;
+  justify-content: space-between;
+}
+
+#bio-txt {
+  padding-top: 10px;
+  max-height: 256px;
+  overflow: auto;
+}
+
+#title {
+  padding: 10px;
 }
 
 .pic {
@@ -92,8 +142,6 @@ nav {
 
   justify-content: space-evenly;
   margin-top: auto;
-  margin-bottom: 1%;
-
   /* border: 2px blue */
 }
 
@@ -107,13 +155,63 @@ nav {
   z-index: 10;
 }
 
-/* link coloring */
+.fade {
+  transition: opacity 0s ease;
+}
+
+.fade:hover {
+  opacity: 0.25;
+}
+
+#img1 {
+  left: 880px;
+  top: 540px;
+}
+
+#img2 {
+  left: 1160px;
+  top: -5px
+}
+
+#log-box{
+  width: 100%;
+  height: 100%;
+
+  margin: 10px;
+}
+
+#log-head {
+  background-color: var(--c1);
+  height: 40px;
+  display:flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+#log-body {
+  background-color: var(--c2);
+  height: 100%;
+  overflow: auto;
+}
+
+.update-entry {
+  padding-top: 0px;
+  margin: 10px;
+  border-bottom: 1px dashed red;
+  display:flex;
+  flex-direction: column;
+}
+
+.log-desc {
+  margin: 0px;
+}
+
 a {
-  color: inherit;
+  color: var(--c4);
   text-decoration-line: none;
 
   &:hover {
-    color: blue;
+    color: var(--c5);
   }
 }
 
