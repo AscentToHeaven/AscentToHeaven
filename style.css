@@ -33,6 +33,12 @@ h2, h3 {
   margin: 0px;
 }
 
+.home {
+ padding: 10px;
+ margin: 0;
+ margin-bottom: 10px;
+}
+
 .master {
   user-select: none;
   position: relative;
@@ -197,13 +203,38 @@ li, ul {
 .update-entry {
   padding-top: 0px;
   margin: 10px;
-  border-bottom: 1px dashed red;
+  border-bottom: 2px dashed var(--c1);
   display:flex;
   flex-direction: column;
 }
 
 .log-desc {
   margin: 0px;
+}
+
+#album-master {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 276px;
+  margin: 10px;
+  border-bottom: 2px dashed var(--c1);
+}
+
+.cover {
+  width: 256px;
+  height: 256px;
+  margin: 10px;
+}
+
+.ablum-text {
+  overflow: auto;
 }
 
 a {
