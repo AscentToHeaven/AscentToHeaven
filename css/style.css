@@ -21,7 +21,7 @@ body {
 
   /* Set margin and  padding: to 0 to avoid a strange outline */
   margin: 0px;
-   padding: var(--def-padding);
+  padding: var(--def-padding);
 
   min-height: 1000px
 }
@@ -54,14 +54,16 @@ h2, h3 {
   justify-content: space-between;
 }
 
+.textbox {
+  background-color: var(--c2) !important;
+  padding: 6px;
+  border-top: solid var(--c2);
+}
+
 .border {
   background-color: var(--bg);
   border: solid var(--c1);
-}
-
-.textbox {
-  background-color: var(--c2);
-  padding: 6px;
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.3);
 }
 
 .valign {
@@ -104,6 +106,7 @@ nav {
   color: var(--fg);
   background-color: var(--bg);
   border: solid var(--c1);
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.15);
 }
 
 .title h1 {
@@ -118,9 +121,7 @@ li, ul {
 #main {
   width: 970px;
   /* height: 1000px; */
-
-   padding: var(--def-padding);
-
+  padding: var(--def-padding);
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -154,6 +155,19 @@ li, ul {
   justify-content: space-evenly;
   margin-top: auto;
   /* border: 2px blue */
+}
+
+.pic img {
+  display: block;
+  transition: transform 0.1s ease;
+}
+
+.pic img:hover {
+  transform: rotate(-15deg);
+}
+
+.pic .shadow {
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.6);
 }
 
 .float-fixed {
@@ -249,6 +263,7 @@ a {
 
   &:hover {
     color: var(--c5);
+    text-shadow: 0px 0px 5px rgba(255,255,255,1);
   }
 }
 

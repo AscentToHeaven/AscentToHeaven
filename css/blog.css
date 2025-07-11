@@ -33,6 +33,10 @@ p {
   border-bottom: 2px dashed var(--c1);
 }
 
+.blog-post p {
+  transition: background-color 50ms ease;
+}
+
 .blog-post p:hover {
- background-color: var(--c1);
+  background-color: var(--c1);
 }
