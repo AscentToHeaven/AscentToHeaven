@@ -30,4 +30,9 @@ p {
 
 .blog-post h2 {
   color: var(--c4);
+  border-bottom: 2px dashed var(--c1);
+}
+
+.blog-post p:hover {
+ background-color: var(--c1);
 }
