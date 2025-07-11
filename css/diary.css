@@ -6,37 +6,37 @@ p {
   margin-bottom: 8px;
 }
 
-#blog-head {
+#diary-head {
   width: 100%;
   height: 30px;
 }
 
-#blog-mainbox {
+#diary-mainbox {
   width: calc(100% - 40px);
   height: 100%;
 }
 
-#blog-entries {
+#diary-entries {
   min-height: 1000px;
   padding: 10px;
 }
 
-.blog-post {
+.diary-post {
   display: flex;
   flex-direction: column;
   max-height: 400px;
   overflow: auto;
 }
 
-.blog-post h2 {
+.diary-post h2 {
   color: var(--c4);
   border-bottom: 2px dashed var(--c1);
 }
 
-.blog-post p {
+.diary-post p {
   transition: background-color 50ms ease;
 }
 
-.blog-post p:hover {
+.diary-post p:hover {
   background-color: var(--c1);
 }

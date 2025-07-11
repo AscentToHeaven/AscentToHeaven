@@ -168,6 +168,12 @@ li, ul {
 
 .pic .shadow {
   box-shadow: 2px 2px 0px rgba(0,0,0,0.6);
+  background-color: var(--c3);
+  transition: transform 0.2s ease;
+
+  &:hover{
+    transform: rotate(-8deg);
+  }
 }
 
 .float-fixed {
