@@ -2,7 +2,7 @@
 @import 'vars.css';
 
 html {
-  background-image:url("/assets/spacer.gif");
+  background-image:url("../assets/spacer.gif");
   background-size: 20%;
 }
 
