@@ -1,14 +1,14 @@
 @import 'colors.css';
+@import 'vars.css';
 
 html {
-  background-color: var(--c5);
+  background-image:url("/assets/spacer.gif");
+  background-size: 20%;
 }
 
 body {
   font-family:'main';
   color: var(--fg);
-  background-image:url("assets/spacer.gif");
-  background-size: 20%;
   /* background-color: var(--c5); */
 
   display:flex;
@@ -16,13 +16,11 @@ body {
   justify-content: center;
   align-items: center;
 
-  /* Set margin and padding to 0 to avoid a strange outline */
-  margin: 0;
-  padding: 0;
+  /* Set margin and  padding: to 0 to avoid a strange outline */
+  margin: 0px;
+   padding: var(--def-padding);
 
-
-  height: 100vh;
-  min-height: 1000px;
+  min-height: 1000px
 }
 
 * {
@@ -34,9 +32,11 @@ h2, h3 {
 }
 
 .home {
- padding: 10px;
- margin: 0;
- margin-bottom: 10px;
+  position: fixed;
+  left: calc(100% - 90px);
+  top: 20px;
+  margin: 10px;
+  padding: 2px;
 }
 
 .master {
@@ -86,19 +86,25 @@ nav {
   align-items:start;
 }
 
-.head {
-  width: 100%;
-  height: 100px;
-
-  margin-left: -10px;
+.title {
+  margin-left: 10px;
   margin-right: 0px;
-  margin-top: -10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+   padding: var(--def-padding);
 
   display:flex;
   flex-direction:column;
   align-items:center;
 
   color: var(--fg);
+  background-color: var(--bg);
+  border: solid var(--c1);
+}
+
+.title h1 {
+  margin: 0px;
 }
 
 li, ul {
@@ -110,7 +116,7 @@ li, ul {
   width: 970px;
   /* height: 1000px; */
 
-  padding: 10px;
+   padding: var(--def-padding);
 
   display:flex;
   flex-direction:column;
@@ -135,10 +141,6 @@ li, ul {
   padding-top: 10px;
   max-height: 256px;
   overflow: auto;
-}
-
-#title {
-  padding: 10px;
 }
 
 .pic {
@@ -186,7 +188,7 @@ li, ul {
   margin: 10px;
 }
 
-#log-head {
+.head {
   background-color: var(--c1);
   height: 40px;
   display:flex;
@@ -208,7 +210,7 @@ li, ul {
   flex-direction: column;
 }
 
-.log-desc {
+.update-entry p {
   margin: 0px;
 }
 
@@ -244,6 +246,10 @@ a {
   &:hover {
     color: var(--c5);
   }
+}
+
+.title-fix {
+  margin-top: -80px;
 }
 
 .debug {
