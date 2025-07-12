@@ -40,3 +40,8 @@ p {
 .diary-post p:hover {
   background-color: var(--c1);
 }
+
+.entry {
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+}
