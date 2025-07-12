@@ -277,6 +277,43 @@ a {
   margin-top: -80px;
 }
 
+.moon {
+  left: -100px;
+  top: -100px;
+  scale: 2;
+  filter: blur(2px);
+  z-index: 0;
+  opacity: 0.5;
+
+  animation: spin 400s linear infinite;
+}
+
+@keyframes spin {
+ to {
+    transform: rotate(-360deg);
+  }
+}
+
+.mainbox {
+  width: calc(100% - 40px);
+  height: 100%;
+  min-height: 1000px;
+  padding: 10px;
+
+  column-count: 2;
+  column-gaps: 5px;
+}
+
+.mainbox img {
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+  margin-bottom: 10px;
+  width: 100%;
+  
+  background-color: var(--bg);
+  border: solid var(--c1);
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.3);
+}
+
 .debug {
   border: 2px solid blue;
 }
