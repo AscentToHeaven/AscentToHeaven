@@ -147,6 +147,16 @@ li, ul {
   overflow: auto;
 }
 
+#bio-txt h3 {
+  padding-top: 10px;
+  margin-bottom: -10px;
+  border-top: 2px dashed var(--c1);
+}
+
+#bio-txt h2 {
+  margin-bottom: -10px;
+}
+
 .pic {
   display: flex;
   bottom: 2%;
@@ -234,7 +244,8 @@ li, ul {
 }
 
 .update-entry p {
-  margin: 0px;
+  margin-bottom: 6px;
+  margin-top: 2px;
 }
 
 #album-main {
