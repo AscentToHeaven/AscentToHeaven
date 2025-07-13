@@ -96,12 +96,9 @@ nav {
   margin-right: 0px;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: var(--def-padding);
 
-   padding: var(--def-padding);
-
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  text-align: center;
 
   color: var(--fg);
   background-color: var(--bg);
@@ -264,11 +261,6 @@ li, ul {
   border-bottom: 2px dashed var(--c1);
 }
 
-.cover {
-  width: 256px;
-  height: 256px;
-  margin: 10px;
-}
 
 .ablum-text {
   overflow: auto;
@@ -329,6 +321,31 @@ a {
   &:hover {
     transform: scale(1.1);
   }
+}
+
+.cover {
+  width: 256px !important;
+  height: 256px !important;
+  margin: 10px !important;
+}
+
+#album-main .a-left {
+  width: 100%;
+}
+
+.a-w {
+  min-width: calc(100% - 276px);
+}
+
+.a-h {
+  min-height: 216px;
+}
+
+.dashed-line {
+  border-bottom: 2px dashed var(--c1);
+}
+.padding {
+  padding: 10px;
 }
 
 .debug {
