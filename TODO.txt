@@ -7,3 +7,4 @@ manifesto page
 LINKS!
 
 lots of images everywhere, make them animated too, move when you hover and stuff
+.
