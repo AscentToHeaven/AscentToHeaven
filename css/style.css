@@ -60,6 +60,10 @@ h2, h3 {
   border-top: solid var(--c2);
 }
 
+.textbox p:hover {
+  background-color: var(--c1);
+}
+
 .border {
   background-color: var(--bg);
   border: solid var(--c1);
@@ -245,12 +249,6 @@ li, ul {
   margin-top: 2px;
 }
 
-#album-main {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
 .album {
   display: flex;
   flex-direction: row;
@@ -351,6 +349,56 @@ a {
 .cb-m {
   margin-top: auto;
   width: 100%;
+}
+
+.album-rev {
+  position: fixed; 
+  inset: 0;
+  display: grid;           /* hidden by default */
+  place-items: center;     /* CSS‑grid centering */
+  background: rgba(0,0,0,.2);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.album-mod {
+  filter: saturate(0) brightness(0.6);
+}
+
+.album-mod.done {
+  filter: unset;
+}
+
+#album-master{
+  width: 1200px;
+}
+
+#album-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  gap: 10px;
+}
+
+.album-rev.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.album-rev-txt, .album-rev > *:not(.close-btn) { /* optional wrapper */
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 50%;
+  max-height: 80%;
+
+  overflow: auto;
+}
+
+.album-rev-txt .textbox {
+  height: calc(100% - 40px);
 }
 
 .debug {

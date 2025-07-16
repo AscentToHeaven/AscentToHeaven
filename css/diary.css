@@ -35,6 +35,11 @@ p {
 
 .diary-post p {
   transition: background-color 50ms ease;
+  margin-bottom: 10px;
+}
+
+.diary-post br {
+  margin-bottom: 10px;
 }
 
 .diary-post p:hover {
