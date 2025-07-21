@@ -1,13 +1,17 @@
 @import 'colors.css';
 @import 'vars.css';
 
+:root{
+  --shadow: 3px 3px 0px 0px rgba(0,0,0,0.3);
+}
+
 html {
   background-image:url("../assets/spacer.gif");
   background-size: 20%;
 }
 
 body {
-  font-family:'Rosovario', cursive;
+  /* font-family:'Rosovario', cursive; */
   font-weight: 400;
   font-style: normal;
   font-size: 17px;
@@ -40,9 +44,22 @@ h2, h3 {
   top: 20px;
   margin: 10px;
   padding: 2px;
+  z-index: 1000;
 }
 
 .master {
+  width: 95vw;
+  height: 95vh;
+  min-height: 90vh;
+
+  user-select: none;
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.master-index {
   user-select: none;
   position: relative;
 
@@ -58,6 +75,7 @@ h2, h3 {
   background-color: var(--c2) !important;
   padding: 6px;
   border-top: solid var(--c2);
+  height: calc(100% - 40px);
 }
 
 .textbox p:hover {
@@ -67,7 +85,8 @@ h2, h3 {
 .border {
   background-color: var(--bg);
   border: solid var(--c1);
-  box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.3);
+  box-shadow: var(--shadow);
+  margin: 10px;
 }
 
 .valign {
@@ -121,7 +140,7 @@ li, ul {
 
 #main {
   width: 970px;
-  /* height: 1000px; */
+  height: 800px;
   padding: var(--def-padding);
   display:flex;
   flex-direction:column;
@@ -143,6 +162,7 @@ li, ul {
 }
 
 #bio-txt {
+  width:100%;
   padding-top: 10px;
   max-height: 256px;
   overflow: auto;
@@ -345,6 +365,9 @@ a {
 .padding {
   padding: 10px;
 }
+.margin {
+  margin: 10px
+}
 
 .cb-m {
   margin-top: auto;
@@ -399,6 +422,10 @@ a {
 
 .album-rev-txt .textbox {
   height: calc(100% - 40px);
+}
+
+.overflow {
+  overflow: auto;
 }
 
 .debug {
